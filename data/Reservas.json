@@ -18,7 +18,7 @@
       "metodo": "Tarjeta de Crédito",
       "estado_pago": "Pagado"
     },
-    "estado_reserva": "Pendiente",
+    "estado_reserva": "Cancelada",
     "notas": "Ninguna"
   },
   {
