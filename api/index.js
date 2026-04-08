@@ -3,6 +3,7 @@ const path = require("path");
 
 const app = express();
 
+// Funciona tanto en local como en Vercel
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../src/views"));
 
