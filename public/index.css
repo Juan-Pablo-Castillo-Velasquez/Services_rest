@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header-sena {
+    background-color: #ffffff;
+    border-bottom: 4px solid #387ee7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sena-logo {
+    width: 50px;
+    height: auto;
+}
+
+.titulo-proyecto h1 {
+    font-size: 18px;
+    color: #0e0d0d;
+    margin: 0;
+}
+
+.titulo-proyecto p {
+    font-size: 12px;
+    color: #4e4e4e;
+}
+
+.nav-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-principal a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.nav-principal a:hover {
+    color: #39A900;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.btn-salir {
+    border: 1px solid #ff4444;
+    color: #ff4444 !important;
+    border-radius: 4px;
+}
+
+.btn-salir:hover {
+    background-color: #ff4444 !important;
+    color: white !important;
+}
+
+
+
+/* FOOTER ESTILOS */
+.footer-sena {
+    margin-top: 50px;
+    padding: 3rem 5% 1.5rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-brand {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #39A900; /* Verde SENA */
+    border-radius: 50%;
+}
+
+.footer-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 350px;
+}
+
+.footer-links-group {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.footer-list a:hover {
+    color: #39A900;
+}
+
+/* BARRA INFERIOR */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.footer-meta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.status-online {
+    color: #22c55e;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.online-dot {
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    border-radius: 50%;
+}

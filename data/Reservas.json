@@ -1,0 +1,441 @@
+[
+  {
+    "id_reserva": "RES-1001",
+    "cliente": {
+      "nombre": "Diana Gomez",
+      "email": "usuario1@ejemplo.com",
+      "telefono": "+57 300 822 6564"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-06-18",
+      "fecha_salida": "2024-06-21",
+      "noches": 3
+    },
+    "pago": {
+      "total": 1195.01,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1002",
+    "cliente": {
+      "nombre": "Ricardo Flores",
+      "email": "usuario2@ejemplo.com",
+      "telefono": "+57 300 144 3903"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Deluxe",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-06-12",
+      "fecha_salida": "2024-06-19",
+      "noches": 7
+    },
+    "pago": {
+      "total": 972.01,
+      "metodo": "Efectivo",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1003",
+    "cliente": {
+      "nombre": "Kevin Sanchez",
+      "email": "usuario3@ejemplo.com",
+      "telefono": "+57 300 822 5793"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Individual",
+      "num_huespedes": 1,
+      "fecha_entrada": "2024-06-17",
+      "fecha_salida": "2024-06-22",
+      "noches": 5
+    },
+    "pago": {
+      "total": 553.93,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1004",
+    "cliente": {
+      "nombre": "Ignacio Ramirez",
+      "email": "usuario4@ejemplo.com",
+      "telefono": "+57 300 420 9299"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Deluxe",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-06-28",
+      "fecha_salida": "2024-07-05",
+      "noches": 7
+    },
+    "pago": {
+      "total": 939.03,
+      "metodo": "PayPal",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1005",
+    "cliente": {
+      "nombre": "Laura Garcia",
+      "email": "usuario5@ejemplo.com",
+      "telefono": "+57 300 453 7674"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 3,
+      "fecha_entrada": "2024-06-27",
+      "fecha_salida": "2024-06-30",
+      "noches": 3
+    },
+    "pago": {
+      "total": 231.01,
+      "metodo": "Transferencia",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1006",
+    "cliente": {
+      "nombre": "Ignacio Lopez",
+      "email": "usuario6@ejemplo.com",
+      "telefono": "+57 300 354 5823"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Doble",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-05-04",
+      "fecha_salida": "2024-05-11",
+      "noches": 7
+    },
+    "pago": {
+      "total": 458.35,
+      "metodo": "Efectivo",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1007",
+    "cliente": {
+      "nombre": "Eduardo Lopez",
+      "email": "usuario7@ejemplo.com",
+      "telefono": "+57 300 797 9898"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Individual",
+      "num_huespedes": 1,
+      "fecha_entrada": "2024-05-12",
+      "fecha_salida": "2024-05-17",
+      "noches": 5
+    },
+    "pago": {
+      "total": 478.27,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1008",
+    "cliente": {
+      "nombre": "Laura Lopez",
+      "email": "usuario8@ejemplo.com",
+      "telefono": "+57 300 402 6274"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Doble",
+      "num_huespedes": 3,
+      "fecha_entrada": "2024-06-27",
+      "fecha_salida": "2024-07-04",
+      "noches": 7
+    },
+    "pago": {
+      "total": 1140.32,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1009",
+    "cliente": {
+      "nombre": "Tomas Martinez",
+      "email": "usuario9@ejemplo.com",
+      "telefono": "+57 300 661 5444"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 3,
+      "fecha_entrada": "2024-05-09",
+      "fecha_salida": "2024-05-15",
+      "noches": 6
+    },
+    "pago": {
+      "total": 309.92,
+      "metodo": "Efectivo",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1010",
+    "cliente": {
+      "nombre": "Oscar Torres",
+      "email": "usuario10@ejemplo.com",
+      "telefono": "+57 300 761 4525"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-05-26",
+      "fecha_salida": "2024-05-28",
+      "noches": 2
+    },
+    "pago": {
+      "total": 859.37,
+      "metodo": "PayPal",\n      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1011",
+    "cliente": {
+      "nombre": "Patricia Rodriguez",
+      "email": "usuario11@ejemplo.com",
+      "telefono": "+57 300 540 9485"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-05-30",
+      "fecha_salida": "2024-06-02",
+      "noches": 3
+    },
+    "pago": {
+      "total": 452.15,
+      "metodo": "Transferencia",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1012",
+    "cliente": {
+      "nombre": "Ignacio Rodriguez",
+      "email": "usuario12@ejemplo.com",
+      "telefono": "+57 300 319 4344"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-06-16",
+      "fecha_salida": "2024-06-19",
+      "noches": 3
+    },
+    "pago": {
+      "total": 1060.96,
+      "metodo": "Efectivo",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1013",
+    "cliente": {
+      "nombre": "Ricardo Ramirez",
+      "email": "usuario13@ejemplo.com",
+      "telefono": "+57 300 357 5625"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-06-04",
+      "fecha_salida": "2024-06-07",
+      "noches": 3
+    },
+    "pago": {
+      "total": 482.44,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1014",
+    "cliente": {
+      "nombre": "Alejandro Ramirez",
+      "email": "usuario14@ejemplo.com",
+      "telefono": "+57 300 668 3352"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-05-30",
+      "fecha_salida": "2024-06-02",
+      "noches": 3
+    },
+    "pago": {
+      "total": 1017.2,
+      "metodo": "Transferencia",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1015",
+    "cliente": {
+      "nombre": "Carlos Garcia",
+      "email": "usuario15@ejemplo.com",
+      "telefono": "+57 300 134 5177"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-05-08",
+      "fecha_salida": "2024-05-12",
+      "noches": 4
+    },
+    "pago": {
+      "total": 622.01,
+      "metodo": "PayPal",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1016",
+    "cliente": {
+      "nombre": "Eduardo Lopez",
+      "email": "usuario16@ejemplo.com",
+      "telefono": "+57 300 821 1865"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2024-06-18",
+      "fecha_salida": "2024-06-24",
+      "noches": 6
+    },
+    "pago": {
+      "total": 699.71,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1017",
+    "cliente": {
+      "nombre": "Fernanda Garcia",
+      "email": "usuario17@ejemplo.com",
+      "telefono": "+57 300 793 1059"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Junior Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2024-05-16",
+      "fecha_salida": "2024-05-19",
+      "noches": 3
+    },
+    "pago": {
+      "total": 614.72,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1018",
+    "cliente": {
+      "nombre": "Patricia Garcia",
+      "email": "usuario18@ejemplo.com",
+      "telefono": "+57 300 861 7454"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Individual",
+      "num_huespedes": 4,
+      "fecha_entrada": "2024-05-05",
+      "fecha_salida": "2024-05-07",
+      "noches": 2
+    },
+    "pago": {
+      "total": 445.58,
+      "metodo": "Transferencia",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1019",
+    "cliente": {
+      "nombre": "Oscar Lopez",
+      "email": "usuario19@ejemplo.com",
+      "telefono": "+57 300 864 8742"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Individual",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-05-14",
+      "fecha_salida": "2024-05-16",
+      "noches": 2
+    },
+    "pago": {
+      "total": 861.58,
+      "metodo": "PayPal",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Requiere cuna"
+  },
+  {
+    "id_reserva": "RES-1020",
+    "cliente": {
+      "nombre": "Beatriz Gomez",
+      "email": "usuario20@ejemplo.com",
+      "telefono": "+57 300 404 2202"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Deluxe",
+      "num_huespedes": 2,
+      "fecha_entrada": "2024-05-24",
+      "fecha_salida": "2024-05-30",
+      "noches": 6
+    },
+    "pago": {
+      "total": 858.73,
+      "metodo": "PayPal",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Check-in",
+    "notas": "Ninguna"
+  }
+]
