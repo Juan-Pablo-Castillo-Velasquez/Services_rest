@@ -74,7 +74,6 @@ body {
 
 
 
-/* FOOTER ESTILOS */
 .footer-sena {
     margin-top: 50px;
     padding: 3rem 5% 1.5rem;
@@ -183,4 +182,248 @@ body {
     height: 6px;
     background-color: currentColor;
     border-radius: 50%;
+}
+
+
+
+.contenedor-lista {
+
+    padding:30px 5%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+.tabla-responsiva{
+
+    overflow-x:auto;
+    background:#fff;
+
+    border-radius:8px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.05)
+
+}
+
+.tabla-reservas{
+
+    width:100%;
+    border-collapse:collapse;
+
+    font-size:14px;
+    text-align:left
+
+}
+
+.tabla-reservas thead th{
+
+    background:#39A900;
+
+    color:#fff;
+
+    padding:15px;
+
+    font-weight:600;
+
+    text-transform:uppercase
+
+}
+
+.tabla-reservas tbody td{
+
+    padding:12px 15px;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#4a5568
+
+}
+
+.tabla-reservas tbody tr:nth-child(even){
+
+    background:#f8fafc
+
+}
+
+.tabla-reservas tbody tr:hover{
+
+    background:#f1f5f9
+
+}
+
+/* etiquetas estado */
+
+.etiqueta-estado{
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:700
+
+}
+
+.estado-confirmada{
+
+    background:#dcfce7;
+    color:#166534
+
+}
+
+.estado-pendiente{
+
+    background:#fef9c3;
+    color:#854d0e
+
+}
+
+.estado-cancelada{
+
+    background:#fee2e2;
+    color:#991b1b
+
+}
+
+.estado-check-in{
+
+    background:#e0f2fe;
+    color:#075985
+
+}
+
+.boton-detalle{
+
+    background:#1e293b;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-weight:600
+
+}
+
+.boton-detalle:hover{
+
+    background:#334155
+
+}
+
+/* modal */
+
+.ventana-modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.5);
+
+    justify-content:center;
+
+    align-items:center
+
+}
+
+.contenido-modal{
+
+    background:#fff;
+
+    width:400px;
+
+    border-radius:8px;
+
+    padding:20px
+
+}
+
+.modal-cabecera{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:15px
+
+}
+
+.cerrar-modal{
+
+    cursor:pointer;
+
+    font-size:22px
+
+}
+
+.separador{
+
+    margin:10px 0
+}
+
+.caja-notas{
+
+    background:#f5f5f5;
+
+    padding:8px;
+
+    border-radius:5px
+
+}
+
+.btn-leer-mas{
+
+    margin-left:8px;
+
+    border:none;
+
+    background:#39A900;
+
+    color:#fff;
+
+    padding:3px 8px;
+
+    border-radius:4px;
+
+    cursor:pointer
+
+}
+
+.info-grupo{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+.info-grupo input,
+.info-grupo select,
+.info-grupo textarea{
+
+padding:8px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+
+}
+
+.info-grupo textarea{
+
+resize:none;
+height:70px;
+
 }

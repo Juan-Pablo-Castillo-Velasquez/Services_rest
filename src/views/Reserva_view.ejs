@@ -1,11 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
-</head>
-<body>
-    
-</body>
-</html>
+<%- include('../components/header') %>
+
+<main class="contenedor-lista">
+
+<div class="encabezado-pagina">
+<h1 class="titulo-seccion"><%= mensaje %></h1>
+<p class="subtitulo-seccion">
+Gestión de ingresos y detalles de huéspedes - ADSO 2024
+</p>
+</div>
+
+<div class="tabla-responsiva">
+
+<table class="tabla-reservas">
+
+<thead>
+<tr>
+<th>ID Reserva</th>
+<th>Nombre Cliente</th>
+<th>Tipo Habitación</th>
+<th>Estado</th>
+<th>Operaciones</th>
+</tr>
+</thead>
+
+<tbody>
+
+<% reservas.forEach((reserva,index)=>{ %>
+
+<tr class="fila-reserva" style="<%= index >= 5 ? 'display:none' : '' %>">
+
+<td><strong><%= reserva.id_reserva %></strong></td>
+
+<td><%= reserva.cliente.nombre %></td>
+
+<td><%= reserva.detalles_estancia.tipo_habitacion %></td>
+
+<td>
+
+<span class="etiqueta-estado estado-<%= reserva.estado_reserva.toLowerCase() %>">
+<%= reserva.estado_reserva %>
+</span>
+
+</td>
+
+<td>
+
+<button
+class="boton-detalle"
+data-reserva='<%- JSON.stringify(reserva) %>'
+onclick="abrirModal(this)"
+>
+Editar
+</button>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</tbody>
+</table>
+
+</div>
+
+<div style="text-align:center;margin-top:20px">
+
+<button id="btnMostrarMas" class="boton-detalle" onclick="mostrarMas()">
+Mostrar más
+</button>
+
+</div>
+
+</main>
+
+
+<!-- MODAL -->
+
+<div id="miModal" class="ventana-modal">
+
+<div class="contenido-modal">
+
+<div class="modal-cabecera">
+
+<h3>Editar Reserva</h3>
+
+<span class="cerrar-modal" onclick="cerrarModal()">
+&times;
+</span>
+
+</div>
+
+<form method="POST" action="/reservas/update">
+
+<input type="hidden" name="id_reserva" id="id_reserva">
+
+<div id="detalleContenido" class="modal-cuerpo"></div>
+
+<div style="margin-top:20px;text-align:right">
+
+<button type="submit" class="boton-detalle">
+Guardar cambios
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+let visibles = 5
+
+
+function mostrarMas(){
+
+const filas = document.querySelectorAll(".fila-reserva")
+
+let contador = 0
+
+filas.forEach(fila=>{
+
+if(fila.style.display==="none" && contador<5){
+
+fila.style.display="table-row"
+contador++
+
+}
+
+})
+
+visibles+=contador
+
+if(visibles>=filas.length){
+
+document.getElementById("btnMostrarMas").style.display="none"
+
+}
+
+}
+
+
+
+
+function abrirModal(boton){
+
+const reserva = JSON.parse(boton.dataset.reserva)
+
+document.getElementById("id_reserva").value = reserva.id_reserva
+
+const cuerpo = document.getElementById("detalleContenido")
+
+cuerpo.innerHTML = `
+
+<div class="info-grupo">
+
+<label>Nombre</label>
+<input type="text" name="nombre" value="${reserva.cliente.nombre}" required>
+
+<label>Email</label>
+<input type="email" name="email" value="${reserva.cliente.email}" required>
+
+<label>Teléfono</label>
+<input type="text" name="telefono" value="${reserva.cliente.telefono}">
+
+<label>Tipo habitación</label>
+
+<select name="habitacion">
+
+<option ${reserva.detalles_estancia.tipo_habitacion==="Suite"?"selected":""}>Suite</option>
+
+<option ${reserva.detalles_estancia.tipo_habitacion==="Deluxe"?"selected":""}>Deluxe</option>
+
+<option ${reserva.detalles_estancia.tipo_habitacion==="Junior Suite"?"selected":""}>Junior Suite</option>
+
+<option ${reserva.detalles_estancia.tipo_habitacion==="Individual"?"selected":""}>Individual</option>
+
+</select>
+
+
+<label>Estado reserva</label>
+
+<select name="estado_reserva">
+
+<option ${reserva.estado_reserva==="Confirmada"?"selected":""}>Confirmada</option>
+
+<option ${reserva.estado_reserva==="Pendiente"?"selected":""}>Pendiente</option>
+
+<option ${reserva.estado_reserva==="Cancelada"?"selected":""}>Cancelada</option>
+
+<option ${reserva.estado_reserva==="Check-in"?"selected":""}>Check-in</option>
+
+</select>
+
+
+<label>Notas</label>
+
+<textarea name="notas">${reserva.notas || ""}</textarea>
+
+</div>
+
+`
+
+document.getElementById("miModal").style.display="flex"
+
+}
+
+
+function cerrarModal(){
+
+document.getElementById("miModal").style.display="none"
+
+}
+
+
+window.onclick = function(event){
+
+const modal = document.getElementById("miModal")
+
+if(event.target===modal){
+
+cerrarModal()
+
+}
+
+}
+
+</script>
+
+<%- include('../components/fotter') %>

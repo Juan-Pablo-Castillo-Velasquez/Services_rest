@@ -2,12 +2,12 @@
   {
     "id_reserva": "RES-1001",
     "cliente": {
-      "nombre": "Diana Gomez",
-      "email": "usuario1@ejemplo.com",
+      "nombre": "juanpablo2007k",
+      "email": "juan@ejemplo.com",
       "telefono": "+57 300 822 6564"
     },
     "detalles_estancia": {
-      "tipo_habitacion": "Junior Suite",
+      "tipo_habitacion": "Individual",
       "num_huespedes": 2,
       "fecha_entrada": "2024-06-18",
       "fecha_salida": "2024-06-21",
@@ -18,7 +18,7 @@
       "metodo": "Tarjeta de Crédito",
       "estado_pago": "Pagado"
     },
-    "estado_reserva": "Check-in",
+    "estado_reserva": "Pendiente",
     "notas": "Ninguna"
   },
   {
@@ -213,7 +213,8 @@
     },
     "pago": {
       "total": 859.37,
-      "metodo": "PayPal",\n      "estado_pago": "Pendiente"
+      "metodo": "PayPal",
+      "estado_pago": "Pendiente"
     },
     "estado_reserva": "Check-in",
     "notas": "Ninguna"
