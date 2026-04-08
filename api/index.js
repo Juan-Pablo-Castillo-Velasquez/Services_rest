@@ -3,10 +3,12 @@ const path = require("path");
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../src/views"));
+const basePath = process.cwd(); // importante en vercel
 
-app.use(express.static(path.join(__dirname, "../public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(basePath, "src/views"));
+
+app.use(express.static(path.join(basePath, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -21,5 +23,3 @@ app.get("/reservas", reservaController.listarReservas);
 app.post("/reservas/update", reservaController.updateReserva);
 
 module.exports = app;
-
-
