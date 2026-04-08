@@ -21,3 +21,5 @@ app.get("/reservas", reservaController.listarReservas);
 app.post("/reservas/update", reservaController.updateReserva);
 
 module.exports = app;
+
+
