@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./api/index.js",
     "dev": "npx nodemon ./api/index.js",
-    "local": "node ./api/server.local.js",
+    "local": "npx nodemon ./api/server.local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

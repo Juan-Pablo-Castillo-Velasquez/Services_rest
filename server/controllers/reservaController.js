@@ -70,3 +70,15 @@ exports.createReserva = (req, res) => {
   res.redirect("/reservas?success=creada");
 
 };
+
+
+
+exports.deleteReserva = (req, res) => {
+  const reservas = JSON.parse(fs.readFileSync(rutaJSON, "utf8"));
+
+  const filtradas = reservas.filter(r => r.id_reserva !== req.params.id);
+
+  fs.writeFileSync(rutaJSON, JSON.stringify(filtradas, null, 2));
+
+  res.redirect("/reservas?success=eliminada");
+};

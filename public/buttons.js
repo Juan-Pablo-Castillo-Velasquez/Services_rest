@@ -138,3 +138,26 @@ function cerrarRegistro() {
       draggable: true
     });
   }
+
+
+  function eliminarReserva(boton) {
+  const id = boton.dataset.id;
+
+  Swal.fire({
+    title: "¿Eliminar reserva?",
+    text: `La reserva ${id} será eliminada permanentemente.`,
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#c0392b",
+    cancelButtonColor: "#6c757d",
+    confirmButtonText: "Sí, eliminar",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch(`/reservas/delete/${id}`, { method: "DELETE" })
+        .then(() => {
+          window.location.href = "/reservas?success=eliminada";
+        });
+    }
+  });
+}

@@ -22,4 +22,6 @@ app.get("/reservas", reservaController.listarReservas);
 app.post("/reservas/update", reservaController.updateReserva);
 
 app.post("/reservas/create", reservaController.createReserva);
+
+app.delete("/reservas/delete/:id", reservaController.deleteReserva);
 module.exports = app;

@@ -460,3 +460,25 @@ height:70px;
 .botonAgregar:active {
   transform: scale(0.98);
 }
+
+
+
+.boton-eliminar {
+  background-color: #c0392b;
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-eliminar:hover {
+  background-color: #a93226;
+}
+
+.boton-eliminar:active {
+  transform: scale(0.98);
+}

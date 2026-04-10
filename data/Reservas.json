@@ -1,49 +1,5 @@
 [
   {
-    "id_reserva": "RES-1001",
-    "cliente": {
-      "nombre": "juanpablo2007k",
-      "email": "juan@ejemplo.com.ES",
-      "telefono": "+57 300 822 6564"
-    },
-    "detalles_estancia": {
-      "tipo_habitacion": "Individual",
-      "num_huespedes": 2,
-      "fecha_entrada": "2024-06-18",
-      "fecha_salida": "2024-06-21",
-      "noches": 3
-    },
-    "pago": {
-      "total": 1195.01,
-      "metodo": "Tarjeta de Crédito",
-      "estado_pago": "Pagado"
-    },
-    "estado_reserva": "Confirmada",
-    "notas": "Ninguna12"
-  },
-  {
-    "id_reserva": "RES-1002",
-    "cliente": {
-      "nombre": "Ricardo Flores",
-      "email": "usuario2@ejemplo.com",
-      "telefono": "+57 300 144 3903"
-    },
-    "detalles_estancia": {
-      "tipo_habitacion": "Deluxe",
-      "num_huespedes": 4,
-      "fecha_entrada": "2024-06-12",
-      "fecha_salida": "2024-06-19",
-      "noches": 7
-    },
-    "pago": {
-      "total": 972.01,
-      "metodo": "Efectivo",
-      "estado_pago": "Pendiente"
-    },
-    "estado_reserva": "Confirmada",
-    "notas": "Ninguna"
-  },
-  {
     "id_reserva": "RES-1003",
     "cliente": {
       "nombre": "Kevin Sanchez",
