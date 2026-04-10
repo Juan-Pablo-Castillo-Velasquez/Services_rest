@@ -60,7 +60,13 @@ Editar
   data-id="<%= reserva.id_reserva %>"
   onclick="eliminarReserva(this)"
 >
-  Eliminar
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3 6 5 6 21 6"></polyline>
+    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+    <path d="M10 11v6"></path>
+    <path d="M14 11v6"></path>
+    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+  </svg>
 </button>
 </td>
 
@@ -133,13 +139,19 @@ Guardar cambios
         <div class="info-grupo">
 
           <label>Nombre</label>
-          <input type="text" name="nombre" required>
+          <input type="text" name="nombre" required
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}"
+            title="Solo letras, mínimo 3 caracteres">
 
           <label>Email</label>
-          <input type="email" name="email" required>
+          <input type="email" name="email" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            title="Formato válido: correo@dominio.com">
 
           <label>Teléfono</label>
-          <input type="text" name="telefono">
+          <input type="text" name="telefono"
+            pattern="\+?[0-9\s]{7,15}"
+            title="Solo números, puede iniciar con +">
 
           <label>Tipo habitación</label>
           <select name="habitacion">
@@ -149,8 +161,9 @@ Guardar cambios
             <option>Individual</option>
           </select>
 
-          <label>Número de huéspedes</label>
-          <input type="number" name="num_huespedes" min="1" value="1" required>
+        <label>Número de huéspedes</label>
+        <input type="number" name="num_huespedes" min="1" max="20" value="1" required
+          title="Mínimo 1, máximo 20">
 
         <label>Fecha de entrada</label>
         <input type="date" name="fecha_entrada" required>
@@ -159,10 +172,14 @@ Guardar cambios
         <input type="date" name="fecha_salida" required>
 
         <label>Noches</label>
-        <input type="number" name="noches" id="noches_registro" min="1" required>
+        <input type="number" name="noches" id="noches_registro" min="1" required
+        pattern="/^[0-9]+$/;"
+        title="Solo números, mínimo 1">
 
         <label>Total</label>
-        <input type="number" name="total" step="0.01" min="0" required>
+        <input type="number" name="total" step="0.01" min="0" required
+          pattern="\d+(\.\d{1,2})?"
+          title="Número positivo con máximo 2 decimales">
 
         <label>Método de pago</label>
         <select name="metodo_pago">
@@ -188,7 +205,9 @@ Guardar cambios
           </select>
 
           <label>Notas</label>
-          <textarea name="notas"></textarea>
+          <textarea name="notas"
+            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s.,\-]{0,200}"
+            title="Máximo 200 caracteres"></textarea>
 
         </div>
       </div>

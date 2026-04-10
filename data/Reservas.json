@@ -418,28 +418,6 @@
     "notas": "Ninguna"
   },
   {
-    "id_reserva": "RES-1022",
-    "cliente": {
-      "nombre": "fefef",
-      "email": "jskdkdmw@gmail.com",
-      "telefono": "kskwdasmk"
-    },
-    "detalles_estancia": {
-      "tipo_habitacion": "Suite",
-      "num_huespedes": 1,
-      "fecha_entrada": "2026-04-09",
-      "fecha_salida": "2026-04-10",
-      "noches": 12
-    },
-    "pago": {
-      "total": 2,
-      "metodo": "Tarjeta de Crédito",
-      "estado_pago": "Reembolsado"
-    },
-    "estado_reserva": "Pendiente",
-    "notas": "aja"
-  },
-  {
     "id_reserva": "RES-1023",
     "cliente": {
       "nombre": "fjuanpedro",
@@ -504,5 +482,27 @@
     },
     "estado_reserva": "Confirmada",
     "notas": "123"
+  },
+  {
+    "id_reserva": "RES-1026",
+    "cliente": {
+      "nombre": "fernando gutierrez",
+      "email": "fernando@gmail.com",
+      "telefono": "312331312321"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 12,
+      "fecha_entrada": "1212-12-12",
+      "fecha_salida": "12112-12-12",
+      "noches": 12
+    },
+    "pago": {
+      "total": 122121,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "122"
   }
 ]
