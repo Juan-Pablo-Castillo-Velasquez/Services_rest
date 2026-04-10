@@ -526,5 +526,27 @@
     },
     "estado_reserva": "Cancelada",
     "notas": "123"
+  },
+  {
+    "id_reserva": "RES-1025",
+    "cliente": {
+      "nombre": "juan",
+      "email": "juanpablo207k@gmail.com",
+      "telefono": "jsajsjd"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2026-04-09",
+      "fecha_salida": "2026-04-09",
+      "noches": 12
+    },
+    "pago": {
+      "total": 2,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "123"
   }
 ]

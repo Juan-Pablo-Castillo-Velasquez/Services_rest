@@ -67,5 +67,6 @@ exports.createReserva = (req, res) => {
 
   reservas.push(nuevaReserva);
   fs.writeFileSync(rutaJSON, JSON.stringify(reservas, null, 2));
-  res.redirect("/reservas");
+  res.redirect("/reservas?success=creada");
+
 };
