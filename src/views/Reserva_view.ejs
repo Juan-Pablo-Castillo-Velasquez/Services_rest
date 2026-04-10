@@ -3,7 +3,10 @@
 <main class="contenedor-lista">
 
 <div class="encabezado-pagina">
-<div><h1 class="titulo-seccion"><%= mensaje %></h1> <button onclick="abrirModal()">Abrir modal</button></div>
+<div style="display:flex; align-items:center; justify-content:space-between;">
+  <h1 class="titulo-seccion"><%= mensaje %></h1>
+  <button class="botonAgregar" onclick="abrirRegistro()">AGREGAR RESERVA</button>
+</div>
 <p class="subtitulo-seccion">
 Gestión de ingresos y detalles de huéspedes - ADSO 2024
 </p>
@@ -75,7 +78,7 @@ Mostrar más
 </main>
 
 
-<!-- MODAL -->
+<!-- MODAL ACTUALIZAR DATOS-->
 
 <div id="miModal" class="ventana-modal">
 
@@ -111,125 +114,87 @@ Guardar cambios
 
 </div>
 
+<!-- MODAL AGREGAR RESERVA -->
+<div id="registroModal" class="ventana-modal">
+  <div class="contenido-modal">
+    <div class="modal-cabecera">
+      <h3>Añadir Reserva</h3>
+      <span class="cerrar-modal" onclick="cerrarRegistro()">&times;</span>
+    </div>
 
-<script>
+    <form method="POST" action="/reservas/create">
+      <div class="modal-cuerpo">
+        <div class="info-grupo">
 
-let visibles = 5
+          <label>Nombre</label>
+          <input type="text" name="nombre" required>
 
+          <label>Email</label>
+          <input type="email" name="email" required>
 
-function mostrarMas(){
+          <label>Teléfono</label>
+          <input type="text" name="telefono">
 
-const filas = document.querySelectorAll(".fila-reserva")
+          <label>Tipo habitación</label>
+          <select name="habitacion">
+            <option>Suite</option>
+            <option>Deluxe</option>
+            <option>Junior Suite</option>
+            <option>Individual</option>
+          </select>
 
-let contador = 0
+          <label>Número de huéspedes</label>
+          <input type="number" name="num_huespedes" min="1" value="1" required>
 
-filas.forEach(fila=>{
+        <label>Fecha de entrada</label>
+        <input type="date" name="fecha_entrada" required>
 
-if(fila.style.display==="none" && contador<5){
+        <label>Fecha de salida</label>
+        <input type="date" name="fecha_salida" required>
 
-fila.style.display="table-row"
-contador++
+        <label>Noches</label>
+        <input type="number" name="noches" id="noches_registro" min="1" required>
 
-}
+        <label>Total</label>
+        <input type="number" name="total" step="0.01" min="0" required>
 
-})
+        <label>Método de pago</label>
+        <select name="metodo_pago">
+        <option>Tarjeta de Crédito</option>
+        <option>Tarjeta de Débito</option>
+        <option>Efectivo</option>
+        <option>Transferencia</option>
+        </select>
 
-visibles+=contador
+        <label>Estado de pago</label>
+        <select name="estado_pago">
+        <option>Pendiente</option>
+        <option>Pagado</option>
+        <option>Reembolsado</option>
+        </select>
 
-if(visibles>=filas.length){
+          <label>Estado reserva</label>
+          <select name="estado_reserva">
+            <option>Confirmada</option>
+            <option>Pendiente</option>
+            <option>Cancelada</option>
+            <option>Check-in</option>
+          </select>
 
-document.getElementById("btnMostrarMas").style.display="none"
+          <label>Notas</label>
+          <textarea name="notas"></textarea>
 
-}
+        </div>
+      </div>
 
-}
+      <div style="margin-top:20px; text-align:right">
+        <button type="submit" class="boton-detalle">Guardar reserva</button>
+      </div>
+    </form>
 
-
-
-
-function abrirModal(boton){
-
-const reserva = JSON.parse(boton.dataset.reserva)
-
-document.getElementById("id_reserva").value = reserva.id_reserva
-
-const cuerpo = document.getElementById("detalleContenido")
-
-cuerpo.innerHTML = `
-
-<div class="info-grupo">
-
-<label>Nombre</label>
-<input type="text" name="nombre" value="${reserva.cliente.nombre}" required>
-
-<label>Email</label>
-<input type="email" name="email" value="${reserva.cliente.email}" required>
-
-<label>Teléfono</label>
-<input type="text" name="telefono" value="${reserva.cliente.telefono}">
-
-<label>Tipo habitación</label>
-
-<select name="habitacion">
-
-<option ${reserva.detalles_estancia.tipo_habitacion==="Suite"?"selected":""}>Suite</option>
-
-<option ${reserva.detalles_estancia.tipo_habitacion==="Deluxe"?"selected":""}>Deluxe</option>
-
-<option ${reserva.detalles_estancia.tipo_habitacion==="Junior Suite"?"selected":""}>Junior Suite</option>
-
-<option ${reserva.detalles_estancia.tipo_habitacion==="Individual"?"selected":""}>Individual</option>
-
-</select>
-
-
-<label>Estado reserva</label>
-
-<select name="estado_reserva">
-
-<option ${reserva.estado_reserva==="Confirmada"?"selected":""}>Confirmada</option>
-
-<option ${reserva.estado_reserva==="Pendiente"?"selected":""}>Pendiente</option>
-
-<option ${reserva.estado_reserva==="Cancelada"?"selected":""}>Cancelada</option>
-
-<option ${reserva.estado_reserva==="Check-in"?"selected":""}>Check-in</option>
-
-</select>
-
-
-<label>Notas</label>
-
-<textarea name="notas">${reserva.notas || ""}</textarea>
-
+  </div>
 </div>
 
-`
 
-document.getElementById("miModal").style.display="flex"
-
-}
-
-
-function cerrarModal(){
-
-document.getElementById("miModal").style.display="none"
-
-}
-
-
-window.onclick = function(event){
-
-const modal = document.getElementById("miModal")
-
-if(event.target===modal){
-
-cerrarModal()
-
-}
-
-}
-
-</script>
 
 <%- include('../components/fotter') %>

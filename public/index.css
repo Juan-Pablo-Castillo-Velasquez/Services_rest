@@ -427,3 +427,36 @@ resize:none;
 height:70px;
 
 }
+
+.contenido-modal {
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-cuerpo {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.botonAgregar {
+  background-color: #4500e7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease;
+}
+
+.botonAgregar:hover {
+  background-color: #000838;
+}
+
+.botonAgregar:active {
+  transform: scale(0.98);
+}

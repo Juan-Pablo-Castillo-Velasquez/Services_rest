@@ -1,9 +1,9 @@
 const express = require("express");
 const path = require("path");
 
+
 const app = express();
 
-// Funciona tanto en local como en Vercel
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../src/views"));
 
@@ -21,4 +21,5 @@ app.get("/reservas", reservaController.listarReservas);
 
 app.post("/reservas/update", reservaController.updateReserva);
 
+app.post("/reservas/create", reservaController.createReserva);
 module.exports = app;

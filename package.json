@@ -2,7 +2,7 @@
   "name": "services_rest",
   "version": "1.0.0",
   "description": "",
- "main": "api/index.js",
+  "main": "api/index.js",
   "scripts": {
     "start": "node ./api/index.js",
     "dev": "npx nodemon ./api/index.js",
@@ -25,6 +25,8 @@
     "ejs": "^5.0.1",
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
+    "socket.io": "^4.8.3",
+    "sweetalert2": "^11.26.24",
     "vercel": "^50.41.0"
   }
 }

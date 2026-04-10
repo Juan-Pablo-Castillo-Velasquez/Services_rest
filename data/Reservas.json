@@ -3,7 +3,7 @@
     "id_reserva": "RES-1001",
     "cliente": {
       "nombre": "juanpablo2007k",
-      "email": "juan@ejemplo.com",
+      "email": "juan@ejemplo.com.ES",
       "telefono": "+57 300 822 6564"
     },
     "detalles_estancia": {
@@ -18,8 +18,8 @@
       "metodo": "Tarjeta de Crédito",
       "estado_pago": "Pagado"
     },
-    "estado_reserva": "Cancelada",
-    "notas": "Ninguna"
+    "estado_reserva": "Confirmada",
+    "notas": "Ninguna12"
   },
   {
     "id_reserva": "RES-1002",
@@ -438,5 +438,93 @@
     },
     "estado_reserva": "Check-in",
     "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1021",
+    "cliente": {
+      "nombre": "dwwdd|",
+      "email": "jdwjbnkns@es.es",
+      "telefono": "wlmxs"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "12212-12-12",
+      "fecha_salida": "1212-12-12",
+      "noches": 12
+    },
+    "pago": {
+      "total": 1221,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "Ninguna"
+  },
+  {
+    "id_reserva": "RES-1022",
+    "cliente": {
+      "nombre": "fefef",
+      "email": "jskdkdmw@gmail.com",
+      "telefono": "kskwdasmk"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2026-04-09",
+      "fecha_salida": "2026-04-10",
+      "noches": 12
+    },
+    "pago": {
+      "total": 2,
+      "metodo": "Tarjeta de Crédito",
+      "estado_pago": "Reembolsado"
+    },
+    "estado_reserva": "Pendiente",
+    "notas": "aja"
+  },
+  {
+    "id_reserva": "RES-1023",
+    "cliente": {
+      "nombre": "fjuanpedro",
+      "email": "jskdkdmw@gmail.com",
+      "telefono": "12312312"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2026-04-09",
+      "fecha_salida": "2026-04-09",
+      "noches": 1
+    },
+    "pago": {
+      "total": 1111,
+      "metodo": "Efectivo",
+      "estado_pago": "Pendiente"
+    },
+    "estado_reserva": "Confirmada",
+    "notas": "1234"
+  },
+  {
+    "id_reserva": "RES-1024",
+    "cliente": {
+      "nombre": "juanpablo2007k",
+      "email": "juan@ejemplo.com",
+      "telefono": "kskwdasmk"
+    },
+    "detalles_estancia": {
+      "tipo_habitacion": "Suite",
+      "num_huespedes": 1,
+      "fecha_entrada": "2026-04-09",
+      "fecha_salida": "2026-04-17",
+      "noches": 1
+    },
+    "pago": {
+      "total": 10,
+      "metodo": "Tarjeta de Débito",
+      "estado_pago": "Pagado"
+    },
+    "estado_reserva": "Cancelada",
+    "notas": "123"
   }
 ]
